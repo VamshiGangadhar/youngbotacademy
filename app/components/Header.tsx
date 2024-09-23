@@ -13,7 +13,7 @@ import {
 
 export default function Header() {
   return (
-    <header className="px-4 lg:px-6 h-20 flex items-center border-b border-[#1e3a5f] bg-[#0a192f]">
+    <header className="px-4 lg:px-6 h-20 flex items-center border-b border-[#1e3a5f] bg-[#0a192f] shadow-lg">
       <Link
         className="flex items-center justify-center"
         href="#"
@@ -24,7 +24,7 @@ export default function Header() {
           alt="Young Bot Academy Logo"
           width={60}
           height={60}
-          className="rounded-full"
+          className="rounded-full transition-transform duration-300 hover:scale-110"
         />
         <span className="ml-2 text-xl font-bold text-white">
           Young Bot Academy
@@ -32,25 +32,25 @@ export default function Header() {
       </Link>
       <nav className="ml-auto hidden md:flex gap-4 sm:gap-6">
         <Link
-          className="text-sm font-medium text-white hover:text-[#64ffda] transition-colors"
+          className="text-sm font-medium text-white hover:text-[#64ffda] transition-colors duration-300"
           href="#"
         >
           Home
         </Link>
         <Link
-          className="text-sm font-medium text-white hover:text-[#64ffda] transition-colors"
+          className="text-sm font-medium text-white hover:text-[#64ffda] transition-colors duration-300"
           href="#"
         >
           Courses
         </Link>
         <Link
-          className="text-sm font-medium text-white hover:text-[#64ffda] transition-colors"
+          className="text-sm font-medium text-white hover:text-[#64ffda] transition-colors duration-300"
           href="#"
         >
           About
         </Link>
         <Link
-          className="text-sm font-medium text-white hover:text-[#64ffda] transition-colors"
+          className="text-sm font-medium text-white hover:text-[#64ffda] transition-colors duration-300"
           href="#"
         >
           Contact
@@ -75,25 +75,25 @@ export default function Header() {
               <SheetDescription>
                 <nav className="flex flex-col gap-4">
                   <Link
-                    className="text-sm font-medium text-white hover:text-[#64ffda] transition-colors"
+                    className="text-sm font-medium text-white hover:text-[#64ffda] transition-colors duration-300"
                     href="#"
                   >
                     Home
                   </Link>
                   <Link
-                    className="text-sm font-medium text-white hover:text-[#64ffda] transition-colors"
+                    className="text-sm font-medium text-white hover:text-[#64ffda] transition-colors duration-300"
                     href="#"
                   >
                     Courses
                   </Link>
                   <Link
-                    className="text-sm font-medium text-white hover:text-[#64ffda] transition-colors"
+                    className="text-sm font-medium text-white hover:text-[#64ffda] transition-colors duration-300"
                     href="#"
                   >
                     About
                   </Link>
                   <Link
-                    className="text-sm font-medium text-white hover:text-[#64ffda] transition-colors"
+                    className="text-sm font-medium text-white hover:text-[#64ffda] transition-colors duration-300"
                     href="#"
                   >
                     Contact
