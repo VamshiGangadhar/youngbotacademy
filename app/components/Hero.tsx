@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Bot, ChevronRight, Cpu, Zap } from "lucide-react";
+import hero from "../images/hero.jpg"
 
 export function Hero() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -92,7 +93,7 @@ export function Hero() {
           >
             <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] shadow-lg">
               <Image
-                src="/placeholder.svg?height=600&width=600"
+                src={hero}
                 alt="Young students working with robots"
                 layout="fill"
                 objectFit="cover"
