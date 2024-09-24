@@ -5,7 +5,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Bot, ChevronRight, Cpu, Zap } from "lucide-react";
-import hero from "../images/hero.jpg"
+import hero from "../images/hero.jpg";
+import Link from "next/link";
 
 export function Hero() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -60,12 +61,14 @@ export function Hero() {
                 Experience a Live Demo
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button
-                variant="outline"
-                className="border-[#64ffda] text-[#64ffda] hover:bg-[#64ffda] hover:text-[#0a192f] transition-transform transform hover:scale-105"
-              >
-                Explore Courses
-              </Button>
+              <Link href="/coursespage">
+                <Button
+                  variant="outline"
+                  className="border-[#64ffda] text-[#64ffda] hover:bg-[#64ffda] hover:text-[#0a192f] transition-transform transform hover:scale-105"
+                >
+                  Explore Courses
+                </Button>
+              </Link>
             </motion.div>
             <motion.div
               className="flex items-center space-x-4 text-[#a8b2d1]"
