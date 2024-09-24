@@ -14,30 +14,7 @@ import {
 } from "@/components/ui/card";
 import Header from "../components/Header";
 import { Footer } from "../components/Footer";
-
-const internships = [
-  {
-    title: "Arduino IDE",
-    description:
-      "Gain hands-on experience in electronics and programming with our Arduino IDE internship. Work on real-world projects using Arduino microcontrollers and develop practical skills in hardware and software integration.",
-    image: "/placeholder.svg?height=200&width=300",
-    formLink: "#arduino-form",
-  },
-  {
-    title: "Web Development",
-    description:
-      "Our Web Development internship covers both front-end and back-end development. Build and deploy fully functional websites using HTML, CSS, JavaScript, and various web frameworks. Enhance your web development skills with real-world applications.",
-    image: "/placeholder.svg?height=200&width=300",
-    formLink: "#web-dev-form",
-  },
-  {
-    title: "Python",
-    description:
-      "Dive deep into Python programming with our Python internship. Apply your knowledge to real-world applications and projects, focusing on problem-solving and software development. This internship will help you enhance your coding skills and prepare for a career in software development.",
-    image: "/placeholder.svg?height=200&width=300",
-    formLink: "#python-form",
-  },
-];
+import internships from "../static/internships";
 
 const benefits = [
   "Hands-On Experience: Work on real projects and gain practical skills.",
@@ -83,7 +60,7 @@ export default function InternshipsPage() {
             >
               <Card className="bg-[#1e3a5f] border-[#64ffda] h-full flex flex-col shadow-lg">
                 <CardHeader>
-                  <div className="relative w-full h-48 mb-4">
+                  <div className="relative w-full h-60 mb-4">
                     <Image
                       src={internship.image}
                       alt={`${internship.title} internship`}
