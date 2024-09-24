@@ -33,27 +33,33 @@ export default function Header() {
       <nav className="ml-auto hidden md:flex gap-4 sm:gap-6">
         <Link
           className="text-sm font-medium text-white hover:text-[#64ffda] transition-colors duration-300"
-          href="#"
+          href="/"
         >
           Home
         </Link>
         <Link
           className="text-sm font-medium text-white hover:text-[#64ffda] transition-colors duration-300"
-          href="#"
+          href="/CoursesPage"
         >
           Courses
         </Link>
         <Link
           className="text-sm font-medium text-white hover:text-[#64ffda] transition-colors duration-300"
-          href="#"
+          href="/AboutPage"
         >
           About
         </Link>
         <Link
           className="text-sm font-medium text-white hover:text-[#64ffda] transition-colors duration-300"
-          href="#"
+          href="/ContactPage"
         >
           Contact
+        </Link>
+        <Link
+          className="text-sm font-medium text-white hover:text-[#64ffda] transition-colors duration-300"
+          href="/Internships"
+        >
+          Internships
         </Link>
       </nav>
       <div className="ml-auto md:hidden">
@@ -76,27 +82,33 @@ export default function Header() {
                 <nav className="flex flex-col gap-4">
                   <Link
                     className="text-sm font-medium text-white hover:text-[#64ffda] transition-colors duration-300"
-                    href="#"
+                    href="/"
                   >
                     Home
                   </Link>
                   <Link
                     className="text-sm font-medium text-white hover:text-[#64ffda] transition-colors duration-300"
-                    href="#"
+                    href="/CoursesPage"
                   >
                     Courses
                   </Link>
                   <Link
                     className="text-sm font-medium text-white hover:text-[#64ffda] transition-colors duration-300"
-                    href="#"
+                    href="/AboutPage"
                   >
                     About
                   </Link>
                   <Link
                     className="text-sm font-medium text-white hover:text-[#64ffda] transition-colors duration-300"
-                    href="#"
+                    href="/ContactPage"
                   >
                     Contact
+                  </Link>
+                  <Link
+                    className="text-sm font-medium text-white hover:text-[#64ffda] transition-colors duration-300"
+                    href="/Internships"
+                  >
+                    Internships
                   </Link>
                 </nav>
               </SheetDescription>
