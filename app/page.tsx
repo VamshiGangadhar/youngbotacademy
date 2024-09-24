@@ -5,8 +5,13 @@ import { motion } from "framer-motion";
 import { Footer } from "./components/Footer";
 import Header from "./components/Header";
 import { Hero } from "./components/Hero";
-import { CourseCard } from "./components/CourseCard";
 import { WelcomeDialog } from "./components/WelcomeDialog";
+import internships from "./static/internships";
+import Image from "next/image";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ChevronRight } from "lucide-react";
 
 export default function Home() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -28,39 +33,53 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
             >
-              {[
-                {
-                  title: "Computer vision & AI",
-                  description:
-                    "Learn the fundamentals of robotics and programming",
-                  image: "/images/computervision.jpg",
-                },
-                {
-                  title: "Computer vision & AI",
-                  description:
-                    "Explore artificial intelligence in a fun, interactive way",
-                  image: "/images/ai_for_kids.jpg",
-                },
-                {
-                  title: "Computer vision & AI",
-                  description:
-                    "Take your skills to the next level with advanced projects",
-                  image: "/images/advanced_robotics.jpg",
-                },
-              ].map((course, index) => (
-                <CourseCard
-                  key={index}
-                  title={course.title}
-                  description={course.description}
-                  image={course.image}
-                />
+              {internships.map((internship, index) => (
+                <motion.div
+                  key={internship.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <Card className="bg-[#1e3a5f] border-[#64ffda] h-full flex flex-col shadow-lg">
+                    <CardHeader>
+                      <div className="relative w-full h-60 mb-4">
+                        <Image
+                          src={internship.image}
+                          alt={`${internship.title} internship`}
+                          layout="fill"
+                          objectFit="cover"
+                          className="rounded-t-lg"
+                        />
+                      </div>
+                      <CardTitle className="text-2xl font-bold text-[#64ffda]">
+                        {internship.title}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex-grow">
+                      <CardDescription className="text-white/80 mb-4">
+                        {internship.description}
+                      </CardDescription>
+                      <Button
+                        asChild
+                        className="w-full bg-[#64ffda] text-[#0a192f] hover:bg-[#45e0c0] mt-auto"
+                      >
+                        <Link href={internship.formLink}>
+                          Apply Now <ChevronRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </motion.div>
               ))}
             </motion.div>
           </div>
         </section>
       </main>
       <Footer />
-      <WelcomeDialog isOpen={isDialogOpen} onClose={() => setIsDialogOpen(false)} />
+      <WelcomeDialog
+        isOpen={isDialogOpen}
+        onClose={() => setIsDialogOpen(false)}
+      />
     </div>
   );
 }

@@ -10,17 +10,18 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import hero from "../images/hero.jpg"
 
 export default function Header() {
   return (
     <header className="px-4 lg:px-6 h-20 flex items-center border-b border-[#1e3a5f] bg-[#0a192f] shadow-lg">
       <Link
         className="flex items-center justify-center"
-        href="#"
+        href="/"
         aria-label="Young Bot Academy Home"
       >
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202024-09-23%20at%2011.09.23_26fd47c9-PjIaALQWCguuwmgeDhEZcIn6fnR1iW.jpg"
+          src={hero}
           alt="Young Bot Academy Logo"
           width={60}
           height={60}

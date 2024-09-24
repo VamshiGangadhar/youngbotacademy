@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import computervision from "../images/computervision.jpg"
+// import computervision from "../images/computervision.jpg"
 
 interface CourseCardProps {
   title: string;
@@ -12,7 +12,7 @@ interface CourseCardProps {
 export const CourseCard: React.FC<CourseCardProps> = ({
   title,
   description,
-//   image,
+  image,
 }) => {
   const placeholderImage = "https://picsum.photos/400/300";
 
@@ -24,7 +24,7 @@ export const CourseCard: React.FC<CourseCardProps> = ({
     >
       <div className="relative w-full h-40 mb-4 rounded-t-lg overflow-hidden">
         <Image
-          src={computervision || placeholderImage}
+          src={image || placeholderImage}
           alt={title}
           layout="fill"
           objectFit="cover"
