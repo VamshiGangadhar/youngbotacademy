@@ -61,7 +61,7 @@ export function Hero() {
                 Experience a Live Demo
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
-              <Link href="/coursespage">
+              <Link href="/CoursesPage">
                 <Button
                   variant="outline"
                   className="border-[#64ffda] text-[#64ffda] hover:bg-[#64ffda] hover:text-[#0a192f] transition-transform transform hover:scale-105"
