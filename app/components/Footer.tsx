@@ -102,7 +102,7 @@ export function Footer() {
                 <span className="sr-only">Instagram</span>
               </a>
               <a
-                href="https://wa.me/8500032403"
+                href="https://wa.me/918500032403"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#64ffda] transition-colors"
