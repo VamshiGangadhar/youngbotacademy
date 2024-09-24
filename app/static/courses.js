@@ -13,7 +13,7 @@ import quarky from "../images/courses/Quarky.jpg";
 import microbit from "../images/courses/Microbit.jpg";
 import appdev from "../images/courses/appdev.jpg";
 import webdev from "../images/courses/webdev.jpg";
-import scratch from "../images/courses/Scratch.jpg";
+import scratch from "../images/courses/scratch.jpg";
 import aiml from "../images/courses/aiml.jpg";
 import python from "../images/courses/python.jpg";
 
