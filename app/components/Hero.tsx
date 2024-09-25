@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Bot, ChevronRight, Cpu, Zap } from "lucide-react";
 import hero from "../images/hero.jpg";
 import Link from "next/link";
+import socialLinks from "../static/socialLinks";
 
 export function Hero() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -57,10 +58,18 @@ export function Hero() {
               className="flex flex-col gap-2 min-[400px]:flex-row"
               variants={itemVariants}
             >
-              <Button className="bg-[#64ffda] text-[#0a192f] hover:bg-[#45e0c0] transition-transform transform hover:scale-105">
-                Experience a Live Demo
-                <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
+              <Link
+                href={
+                  socialLinks.find((link) => link.name === "internship")?.url ||
+                  "#"
+                }
+                target="_blank"
+              >
+                <Button className="bg-[#64ffda] text-[#0a192f] hover:bg-[#45e0c0] transition-transform transform hover:scale-105">
+                  Register for a Demo
+                  <ChevronRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
               <Link href="/CoursesPage">
                 <Button
                   variant="outline"

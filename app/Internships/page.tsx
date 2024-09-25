@@ -15,6 +15,7 @@ import {
 import Header from "../components/Header";
 import { Footer } from "../components/Footer";
 import internships from "../static/internships";
+import socialLinks from "../static/socialLinks";
 
 const benefits = [
   "Hands-On Experience: Work on real projects and gain practical skills.",
@@ -44,10 +45,10 @@ export default function InternshipsPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          At <span className="text-[#64ffda]">Youngbot Academy</span>, we are committed to providing practical, hands-on
-          experiences through our internship programs. Our internships are
-          designed to enhance your skills and prepare you for a future in
-          technology and engineering.
+          At <span className="text-[#64ffda]">Youngbot Academy</span>, we are
+          committed to providing practical, hands-on experiences through our
+          internship programs. Our internships are designed to enhance your
+          skills and prepare you for a future in technology and engineering.
         </motion.p>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-16">
@@ -81,7 +82,12 @@ export default function InternshipsPage() {
                     asChild
                     className="w-full bg-[#64ffda] text-[#0a192f] hover:bg-[#45e0c0] mt-auto"
                   >
-                    <Link href={internship.formLink}>
+                    <Link
+                      href={
+                        socialLinks.find((link) => link.name === "internship")
+                          ?.url || "#"
+                      }
+                    >
                       Apply Now <ChevronRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
@@ -121,9 +127,10 @@ export default function InternshipsPage() {
           transition={{ duration: 0.5, delay: 0.8 }}
         >
           <p className="text-xl mb-6 leading-relaxed">
-            Join <span className="text-[#64ffda]">Youngbot Academy&apos;s</span> internship program and take the next
-            step in your educational journey. Prepare for a bright future with
-            practical experience and expert mentorship.
+            Join <span className="text-[#64ffda]">Youngbot Academy&apos;s</span>{" "}
+            internship program and take the next step in your educational
+            journey. Prepare for a bright future with practical experience and
+            expert mentorship.
           </p>
           <Button
             asChild
