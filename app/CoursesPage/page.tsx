@@ -14,7 +14,8 @@ import {
 import Header from "../components/Header";
 import { Footer } from "../components/Footer";
 import courses from "../static/courses";
-
+import socialLinks from "../static/socialLinks";
+import Link from "next/link";
 
 export default function CoursesPage() {
   const [expandedCourse, setExpandedCourse] = useState<string | null>(null);
@@ -79,12 +80,21 @@ export default function CoursesPage() {
                     {course.description}
                   </CardDescription>
                   <div className="flex space-x-2">
-                    <Button className="flex-1 bg-[#64ffda] text-[#0a192f] hover:bg-[#45e0c0]">
-                      Enroll
-                    </Button>
+                    <Link
+                      href={
+                        socialLinks.find((link) => link.name === "courses")
+                          ?.url || "#"
+                      }
+                      target="_blank"
+                      className="flex-1"
+                    >
+                      <Button className="w-full bg-[#64ffda] text-[#0a192f] hover:bg-[#45e0c0]">
+                        Enroll
+                      </Button>
+                    </Link>
                     <Button
                       variant="outline"
-                      className="flex-1 border-[#64ffda] text-[#64ffda] hover:bg-[#64ffda] hover:text-[#0a192f]"
+                      className="flex-1 w-full border-[#64ffda] text-[#64ffda] hover:bg-[#64ffda] hover:text-[#0a192f]"
                       onClick={() => toggleCourse(course.title)}
                     >
                       {expandedCourse === course.title

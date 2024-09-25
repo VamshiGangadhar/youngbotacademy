@@ -8,10 +8,17 @@ import { Hero } from "./components/Hero";
 import { WelcomeDialog } from "./components/WelcomeDialog";
 import internships from "./static/internships";
 import Image from "next/image";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import socialLinks from "./static/socialLinks";
 
 export default function Home() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -63,7 +70,14 @@ export default function Home() {
                         asChild
                         className="w-full bg-[#64ffda] text-[#0a192f] hover:bg-[#45e0c0] mt-auto"
                       >
-                        <Link href={internship.formLink}>
+                        <Link
+                          href={
+                            socialLinks.find(
+                              (link) => link.name === "internship"
+                            )?.url || "#"
+                          }
+                          target="_blank"
+                        >
                           Apply Now <ChevronRight className="ml-2 h-4 w-4" />
                         </Link>
                       </Button>

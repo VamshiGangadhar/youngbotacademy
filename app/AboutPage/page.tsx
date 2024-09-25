@@ -110,7 +110,7 @@ export default function AboutPage() {
             asChild
             className="bg-[#64ffda] text-[#0a192f] hover:bg-[#45e0c0]"
           >
-            <Link href="/courses">
+            <Link href="/CoursesPage">
               Explore Our Courses <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
