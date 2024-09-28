@@ -4,61 +4,41 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import {  Star } from "lucide-react";
 import Image from "next/image";
 import default_avatar from "../images/avatars/circle-user-round.svg"
-const reviews = [
-  {
-    name: "John Doe",
-    review: "The courses at Young Bot Academy are fantastic! My child has learned so much and is always excited to attend the classes.",
-    rating: 4.5,
-    avatar: "",
-  },
-  {
-    name: "Jane Smith",
-    review: "A wonderful experience for my kids. The instructors are knowledgeable and the curriculum is very engaging.",
-    rating: 4,
-    avatar: "",
-  },
-  {
-    name: "Sam Wilson",
-    review: "Highly recommend Young Bot Academy! The hands-on projects and interactive learning have been great for my child's development.",
-    rating: 5,
-    avatar: "",
-  }
-];
-
+import reviews from "../static/reviews";
 
 export function Reviews() {
-  return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-[#112240] to-[#0a192f]">
-      <div className="container px-4 md:px-6">
-        <motion.h2
-          className="text-4xl font-bold text-center text-[#64ffda] mb-12"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          What Parents Are Saying
-        </motion.h2>
-        <motion.div
-          className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          {reviews.map((review, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <ReviewCard review={review} />
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-    </section>
-  );
-}
+    return (
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-[#112240] to-[#0a192f]">
+        <div className="container px-4 md:px-6">
+          <motion.h2
+            className="text-4xl font-bold text-center text-[#64ffda] mb-12"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            What Parents Are Saying
+          </motion.h2>
+          <motion.div
+            className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            {reviews.map((review, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <ReviewCard review={review} />
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+    );
+  }
 
 function ReviewCard({
     review,
