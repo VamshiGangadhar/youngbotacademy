@@ -5,6 +5,14 @@ import { Mail, Phone, Instagram, Facebook, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "../components/Header";
 import { Footer } from "../components/Footer";
+import socialLinks from "../static/socialLinks";
+
+const socialUrl = (account: string) => {
+  const link = socialLinks.find(
+    (link) => link.name.toLowerCase() === account.toLowerCase()
+  );
+  return link ? link.url : "";
+};
 
 export default function ContactPage() {
   return (
@@ -40,12 +48,12 @@ export default function ContactPage() {
             <div className="bg-[#1e3a5f] border-[#64ffda] h-full flex flex-col shadow-lg p-6 rounded-lg">
               <Mail className="h-6 w-6 text-[#64ffda] mb-4" />
               <h2 className="text-2xl font-bold text-[#64ffda] mb-2">Email</h2>
-              <p className="text-white/80 mb-4">Srinivas32403@gmail.com</p>
+              <p className="text-white/80 mb-4">youngbotacademy@gmail.com</p>
               <Button
                 asChild
                 className="w-full bg-[#64ffda] text-[#0a192f] hover:bg-[#45e0c0] mt-auto"
               >
-                <a href="mailto:Srinivas32403@gmail.com">Send an Email</a>
+                <a href="mailto:youngbotacademy@gmail.com">Send an Email</a>
               </Button>
             </div>
           </motion.div>
@@ -78,13 +86,13 @@ export default function ContactPage() {
               <h2 className="text-2xl font-bold text-[#64ffda] mb-2">
                 Instagram
               </h2>
-              <p className="text-white/80 mb-4">@your_instagram_id</p>
+              <p className="text-white/80 mb-4">@youngbotacademy</p>
               <Button
                 asChild
                 className="w-full bg-[#64ffda] text-[#0a192f] hover:bg-[#45e0c0] mt-auto"
               >
                 <a
-                  href="https://www.instagram.com/your_instagram_id"
+                  href={socialUrl("instagram")}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -104,13 +112,13 @@ export default function ContactPage() {
               <h2 className="text-2xl font-bold text-[#64ffda] mb-2">
                 YouTube
               </h2>
-              <p className="text-white/80 mb-4">Your YouTube Channel</p>
+              <p className="text-white/80 mb-4">youngbotacademy</p>
               <Button
                 asChild
                 className="w-full bg-[#64ffda] text-[#0a192f] hover:bg-[#45e0c0] mt-auto"
               >
                 <a
-                  href="https://www.youtube.com/your_channel"
+                  href={socialUrl("YouTube")}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -130,13 +138,13 @@ export default function ContactPage() {
               <h2 className="text-2xl font-bold text-[#64ffda] mb-2">
                 Facebook
               </h2>
-              <p className="text-white/80 mb-4">Your Facebook Page</p>
+              <p className="text-white/80 mb-4">youngbotacademy</p>
               <Button
                 asChild
                 className="w-full bg-[#64ffda] text-[#0a192f] hover:bg-[#45e0c0] mt-auto"
               >
                 <a
-                  href="https://www.facebook.com/your_page"
+                  href={socialUrl("facebook")}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
