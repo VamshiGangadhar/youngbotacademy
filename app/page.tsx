@@ -19,6 +19,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import socialLinks from "./static/socialLinks";
+import { Reviews } from "./components/Reviews";
 
 export default function Home() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -88,6 +89,7 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
+        <Reviews />
       </main>
       <Footer />
       <WelcomeDialog
