@@ -24,6 +24,20 @@ const internships = [
     image: python,
     formLink: "#python-form",
   },
+  {
+    title: "Data Science",
+    description:
+      "Dive deep into Python programming with our Python internship. Apply your knowledge to real-world applications and projects, focusing on problem-solving and software development. This internship will help you enhance your coding skills and prepare.Python internship",
+    image: python,
+    formLink: "#python-form",
+  },
+  {
+    title: "Machine Learning",
+    description:
+      "Dive deep into Python programming with our Python internship. Apply your knowledge to real-world applications and projects, focusing on problem-solving and software development. This internship will help you enhance your coding skills and prepare.Python internship",
+    image: python,
+    formLink: "#python-form",
+  },
 ];
 
 export default internships;
