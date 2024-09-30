@@ -1,7 +1,6 @@
 import arduino from "../images/internships/ardunio.jpg";
 import webdev from "../images/internships/webd.jpg";
 import python from "../images/internships/python.jpg";
-import ds from "../images/internships/python-copy.jpg";
 
 const internships = [
   {
@@ -24,7 +23,7 @@ const internships = [
       "Dive deep into Python programming with our Python internship. Apply your knowledge to real-world applications and projects, focusing on problem-solving and software development. This internship will help you enhance your coding skills and prepare.Python internship",
     image: python,
     formLink: "#python-form",
-  },
+  }
 ];
 
 export default internships;
