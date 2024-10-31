@@ -7,7 +7,7 @@ import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import defaultImage from "../images/avatars/circle-user-round.svg";
-import reviews from "../static/reviews"
+import reviews from "../static/reviews";
 
 export function Reviews() {
   const [expandedReview, setExpandedReview] = useState<number | null>(null);
@@ -148,6 +148,7 @@ export function Reviews() {
             className="absolute right-0 transform -translate-y-1/2 bg-[#1e3a5f] text-white hover:bg-[#64ffda] hover:text-[#0a192f] mr-2 z-10 transition-transform duration-300 ease-in-out"
             onClick={nextSlide}
             style={{ top: "50%" }}
+            disabled={currentIndex === maxIndex}
           >
             <ChevronRight className="h-4 w-4" />
             <span className="sr-only">Next review</span>
