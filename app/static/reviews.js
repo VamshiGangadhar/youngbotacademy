@@ -1,49 +1,25 @@
+import parva_avatar from "../images/avatars/parva.jpg"
+import arjun_avatar from "../images/avatars/arjun.jpg"
+
 const reviews = [
   {
     id: 1,
-    name: "Alex Johnson",
-    avatar: "",
+    name: "Parva USA Grade 6",
+    avatar: parva_avatar,
     role: "Student",
     review:
-      "Young Bot Academy has been an incredible experience! The hands-on projects really helped me understand robotics concepts. I've learned so much and can't wait to apply these skills in the future.",
+      "Taking this robotics class has been one of the best decisions I’ve made in my life. The teacher really knows how to break down complicated topics in a way that is less complex and more engaging. He’s always encouraging us to think critically and find solutions on our own, which has made me more confident in my problem-solving skills. The lessons are fun, and I’ve gained a deeper understanding of robotics and programming. I definitely feel more prepared for future challenges in tech thanks to this class!",
     rating: 5,
   },
   {
     id: 2,
-    name: "Samantha Lee",
-    avatar: "",
+    name: "Mohitha USA",
+    avatar: arjun_avatar,
     role: "Parent",
     review:
-      "My daughter loves the AI for Kids course. It's amazing to see her enthusiasm for technology grow! The instructors are patient and make complex topics accessible for young learners.",
+      "My son Arjun , 13 years, has been attending a Arduino class held by Mr.Srinivas. I had requested for a demo class in the beginning because Arjun wasn’t sure if Arduino would interest him. Arjun loved rte demo! He mentioned the class was very engaging and informative. Mr Srinivas was also very flexible with the class timings considering we live in US .What I love about that class is that Mr Srinivas first questions Arjun to know what his understanding about a certain topic was and then give additional information. The classes are not just one way instructions from Mr Srinivas . In addition, there are homework assignments given which a sense of accomplishment! Arjun built a sensor for homework and was showing around to his little brother! Arjun is keen to work with Mr.Srinivas and build a robot after this course is complete!!",
     rating: 4.5,
-  },
-  {
-    id: 3,
-    name: "Michael Chen",
-    avatar: "",
-    role: "Student",
-    review:
-      "The advanced robotics course challenged me in the best ways possible. I feel prepared for a future in tech! The projects were engaging and the mentorship was invaluable.",
-    rating: 4.5,
-  },
-  {
-    id: 4,
-    name: "Emily Rodriguez",
-    avatar: "",
-    role: "Student",
-    review:
-      "I never thought I'd be building my own robot at 12 years old! Young Bot Academy made it possible and fun. The instructors are awesome and always ready to help.",
-    rating: 5,
-  },
-  {
-    id: 5,
-    name: "David Kim",
-    avatar: "",
-    role: "Parent",
-    review:
-      "As a tech professional myself, I'm impressed by the curriculum at Young Bot Academy. It's comprehensive and up-to-date with the latest in robotics and AI.",
-    rating: 4,
-  },
+  }
 ];
 
 export default reviews;
